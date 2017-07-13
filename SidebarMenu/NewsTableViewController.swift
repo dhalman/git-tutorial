@@ -47,7 +47,20 @@ class NewsTableViewController: UITableViewController {
         return 3
     }
 
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.row == 0)
+        {
+            performSegue(withIdentifier: "tabletonews", sender: self)
+        }
+        else if (indexPath.row == 1)
+        {
+            performSegue(withIdentifier: "tabletomap", sender: self)
+        }
+        else
+        {
+            performSegue(withIdentifier: "tabletophoto", sender: self)
+        }
+    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
 
