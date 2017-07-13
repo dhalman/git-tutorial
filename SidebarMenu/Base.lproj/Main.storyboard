@@ -159,6 +159,7 @@
                     <connections>
                         <outlet property="extraButton" destination="7xL-Vw-L78" id="vuc-RY-0Zs"/>
                         <outlet property="menuButton" destination="bvR-yD-ToH" id="Rui-eS-C5i"/>
+                        <segue destination="551-rY-ePd" kind="show" identifier="blah" id="XGt-oR-v9g"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHq-4Y-pqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -358,6 +359,24 @@
             </objects>
             <point key="canvasLocation" x="2577" y="780"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="UqO-qh-OJJ">
+            <objects>
+                <viewController id="551-rY-ePd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bTD-yW-lTI"/>
+                        <viewControllerLayoutGuide type="bottom" id="bUX-oq-F9x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qJg-XW-ma0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0o-2b-SUy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="-681"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="UtP-zp-P1I">
             <objects>
@@ -544,6 +563,6 @@
         <image name="tag" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tWZ-CD-OTO"/>
+        <segue reference="foL-zu-uHU"/>
     </inferredMetricsTieBreakers>
 </document>
