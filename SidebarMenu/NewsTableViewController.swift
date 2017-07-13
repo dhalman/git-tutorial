@@ -42,6 +42,10 @@ class NewsTableViewController: UITableViewController {
         return 1
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "newsPushSegue", sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         return 3
