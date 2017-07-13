@@ -29,6 +29,8 @@ class NewsTableViewController: UITableViewController {
         
         }
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,6 +77,12 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        performSegue(withIdentifier: "mySegueID", sender: nil)
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.
