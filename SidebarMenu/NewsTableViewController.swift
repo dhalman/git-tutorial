@@ -110,7 +110,9 @@ class NewsTableViewController: UITableViewController {
         return true
     }
     */
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetail", sender: self);
+    }
     /*
     // MARK: - Navigation
 
