@@ -37,6 +37,8 @@ class NewsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
@@ -47,6 +49,11 @@ class NewsTableViewController: UITableViewController {
         return 3
     }
 
+    /*
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "go", sender: nil)
+    }
+ */
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
