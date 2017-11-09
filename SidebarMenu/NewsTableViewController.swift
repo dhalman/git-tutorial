@@ -75,6 +75,10 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "NewsSegue", sender: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -111,14 +115,25 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "NewsSegue" {
+            /*let destVC = segue.destination as? ProfileVC
+            let selectedIndexPath = tableView.indexPathForSelectedRow
+            destVC?.groupNameFromTable = groups[(selectedIndexPath?.row)!].groupName
+            destVC?.groupDescriptionFromTable = groups[(selectedIndexPath?.row)!].groupDescription
+            destVC?.newAnnouncementFromTable = groups[(selectedIndexPath?.row)!].newAnnouncement
+            destVC?.newChatMessageFromTable = groups[(selectedIndexPath?.row)!].newChatMessage
+            destVC?.indexPressed = (selectedIndexPath?.row)!
+            */
+        }
     }
-    */
+    
 
 }
