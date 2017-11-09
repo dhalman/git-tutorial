@@ -36,7 +36,9 @@ class NewsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "mySegue", sender: nil)
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
