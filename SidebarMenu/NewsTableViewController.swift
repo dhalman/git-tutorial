@@ -11,7 +11,7 @@ import UIKit
 class NewsTableViewController: UITableViewController {
     @IBOutlet var menuButton:UIBarButtonItem!
     @IBOutlet var extraButton:UIBarButtonItem!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,6 +75,16 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showNews", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNews" {
+            let destVC = segue.destination as? NewsViewController
+            destVC?.label = "Hello there"
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
