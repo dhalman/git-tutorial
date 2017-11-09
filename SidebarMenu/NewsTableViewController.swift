@@ -75,6 +75,10 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // You don't need to call the performSegue function if you specify the segue in storyboard
+        // performSegue(withIdentifier: "segToMyVC", sender: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
