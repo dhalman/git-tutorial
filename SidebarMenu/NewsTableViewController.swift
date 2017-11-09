@@ -29,6 +29,10 @@ class NewsTableViewController: UITableViewController {
         
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "mySegue", sender: Any?.self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
