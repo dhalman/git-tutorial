@@ -11,7 +11,8 @@ import UIKit
 class NewsTableViewController: UITableViewController {
     @IBOutlet var menuButton:UIBarButtonItem!
     @IBOutlet var extraButton:UIBarButtonItem!
-
+    var textfield : String = ""
+    var image : UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,7 +76,23 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
-
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let selectedCell = tableView.cellForRow(at: indexPath)! as! NewsTableViewCell
+//        textfield = selectedCell.postTitleLabel.text!
+//        image = selectedCell.postImageView.image!
+//        print(selectedCell.postImageView.image!)
+//        print(selectedCell.postTitleLabel.text!)
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showNews" {
+            let nextVC = segue.destination as? NewsVC
+            let selectedCell = tableView.cellForRow(at: tableView.indexPathForSelectedRow!) as! NewsTableViewCell
+            nextVC?.text = selectedCell.postTitleLabel.text!
+            nextVC?.image = selectedCell.postImageView.image!
+        
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
