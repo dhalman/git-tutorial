@@ -34,7 +34,16 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        let myalert = UIAlertController(title: "Do you want to segue?", message: "It is a super secret screen", preferredStyle: UIAlertControllerStyle.alert)
+        
+        myalert.addAction(UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
+            self.performSegue(withIdentifier: "myPush", sender: self)
+        })
+        myalert.addAction(UIAlertAction(title: "No", style: .cancel) { (action:UIAlertAction!) in
+            //No action
+        })
+        self.present(myalert, animated: true)
+        //performSegue(withIdentifier: "myPush", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

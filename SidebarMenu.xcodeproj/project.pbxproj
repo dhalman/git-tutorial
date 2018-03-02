@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB9339B52049E26700161F9B /* UnusedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9339B42049E26700161F9B /* UnusedVC.swift */; };
+		AB9339B72049E31F00161F9B /* lolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9339B62049E31F00161F9B /* lolViewController.swift */; };
 		F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47029F51A7F27DB00E30A3C /* AppDelegate.swift */; };
 		F47029FB1A7F27DB00E30A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47029FC1A7F27DB00E30A3C /* Images.xcassets */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB9339B42049E26700161F9B /* UnusedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnusedVC.swift; sourceTree = "<group>"; };
+		AB9339B62049E31F00161F9B /* lolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lolViewController.swift; sourceTree = "<group>"; };
 		F47029F01A7F27DB00E30A3C /* SidebarMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SidebarMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F41A7F27DB00E30A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47029F51A7F27DB00E30A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				F4D750161BD38F0C009E1003 /* SWRevealViewController.h */,
 				F4D750171BD38F0C009E1003 /* SWRevealViewController.m */,
 				F4D750151BD38F0C009E1003 /* SidebarMenu-Bridging-Header.h */,
+				AB9339B42049E26700161F9B /* UnusedVC.swift */,
+				AB9339B62049E31F00161F9B /* lolViewController.swift */,
 			);
 			name = SWRevealViewController;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 				F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */,
 				F491E74C1A7F4C630026528E /* NewsTableViewCell.swift in Sources */,
 				F491E7531A7F7DF20026528E /* MapViewController.swift in Sources */,
+				AB9339B72049E31F00161F9B /* lolViewController.swift in Sources */,
 				F491E74A1A7F4B300026528E /* NewsTableViewController.swift in Sources */,
+				AB9339B52049E26700161F9B /* UnusedVC.swift in Sources */,
 				F491E7551A7F7E010026528E /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
