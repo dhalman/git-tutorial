@@ -32,9 +32,9 @@ class NewsTableViewController: UITableViewController
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    override  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        performSegue(withIdentifier: "newsDetailPush", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
