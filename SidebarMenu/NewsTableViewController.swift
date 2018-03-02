@@ -34,7 +34,11 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        
+        let alertController = UIAlertController(title: "Are you sure?", message: "...that you want to navigate to this super secret view???", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Why wouldn't I be?", style: .default, handler: {_ in self.performSegue(withIdentifier: "letsGo", sender: self)}))
+        alertController.addAction(UIAlertAction(title: "...maybe not", style: .cancel, handler: nil))
+        present(alertController, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -81,7 +85,6 @@ class NewsTableViewController: UITableViewController
 
         return cell
     }
-    
     
     /*
     // Override to support conditional editing of the table view.
