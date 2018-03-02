@@ -34,6 +34,7 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        
         let alert = UIAlertController(title:"Proceed?", message:"Would you like to proceed?", preferredStyle: .alert)
         let okay = UIAlertAction(title:"Yes", style: .default, handler:{_ in CATransaction.setCompletionBlock({
             self.performSegue(withIdentifier: "myPush", sender: nil)

@@ -309,8 +309,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello I am a new VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZK-dl-g5b">
-                                <rect key="frame" x="111" y="174" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello, I am a new VC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZK-dl-g5b">
+                                <rect key="frame" x="111" y="174" width="157" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2Wt-ud-7nn"/>
                                     <constraint firstAttribute="width" constant="152" id="ptq-os-N4E"/>
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcr-jM-8Jt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3366" y="-687"/>
+            <point key="canvasLocation" x="3466" y="-687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a23-LC-1XJ">
