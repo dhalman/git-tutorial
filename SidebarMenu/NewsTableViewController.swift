@@ -33,6 +33,20 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        let refreshAlert = UIAlertController(title: "Open?", message: "Do you want to open this news article?", preferredStyle: UIAlertControllerStyle.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.segueToDetail()
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            //
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    func segueToDetail() {
         performSegue(withIdentifier: "myNewViewControllerSegue", sender: self)
     }
     
