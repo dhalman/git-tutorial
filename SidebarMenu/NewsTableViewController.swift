@@ -8,7 +8,8 @@
 
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+class NewsTableViewController: UITableViewController
+{
     @IBOutlet var menuButton:UIBarButtonItem!
     @IBOutlet var extraButton:UIBarButtonItem!
 
@@ -29,7 +30,26 @@ class NewsTableViewController: UITableViewController {
         
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let refreshAlert = UIAlertController(title: "Open?", message: "Do you want to open this news article?", preferredStyle: UIAlertControllerStyle.alert)
 
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            self.segueToDetail()
+        }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            //
+        }))
+
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    func segueToDetail() {
+        performSegue(withIdentifier: "myNewViewControllerSegue", sender: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,7 +95,7 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -96,6 +116,8 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
+    
+   
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
