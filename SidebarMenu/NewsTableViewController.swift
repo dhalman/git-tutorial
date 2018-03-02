@@ -30,11 +30,21 @@ class NewsTableViewController: UITableViewController
         
         }
     }
-    
+   
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+      let segueAlert = UIAlertController(title: "Segue", message: "Move to next screen?", preferredStyle: UIAlertControllerStyle.alert)
+      
+      segueAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+         self.performSegue(withIdentifier: "daWaeSegue",sender:self)
+      }))
+      
+      segueAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+      }))
+      
+      present(segueAlert, animated: true, completion: nil)
+      
     }
     
     override func didReceiveMemoryWarning() {
