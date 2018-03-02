@@ -8,7 +8,8 @@
 
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+class NewsTableViewController: UITableViewController
+{
     @IBOutlet var menuButton:UIBarButtonItem!
     @IBOutlet var extraButton:UIBarButtonItem!
 
@@ -29,7 +30,33 @@ class NewsTableViewController: UITableViewController {
         
         }
     }
-
+    
+    func alert (title: String, message: String, completion: @escaping ((Bool) -> Void)) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            alertController.dismiss(animated: true, completion: nil)
+            completion(true) // true signals "YES"
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+            alertController.dismiss(animated: true, completion: nil)
+            completion(false) // false singals "NO"
+        }))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        alert(title: "Hi", message: "Want to proceed?", completion: { result in
+            if result {
+                self.performSegue(withIdentifier: "pushSegueName", sender: self)
+            }
+        })
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,7 +102,7 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -96,6 +123,8 @@ class NewsTableViewController: UITableViewController {
     }
     */
 
+    
+   
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
