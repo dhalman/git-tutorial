@@ -34,7 +34,24 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+      let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to navigate to this page?", preferredStyle: .alert)
+      
+      // Create OK button with action handler
+      let ok = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
+         self.performSegue(withIdentifier: "myPush", sender: self)
+      })
+      
+      // Create Cancel button with action handlder
+      let cancel = UIAlertAction(title: "No", style: .cancel) { (action) -> Void in
+         
+      }
+      
+      //Add OK and Cancel button to dialog message
+      dialogMessage.addAction(ok)
+      dialogMessage.addAction(cancel)
+      
+      // Present dialog message to user
+      self.present(dialogMessage, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
