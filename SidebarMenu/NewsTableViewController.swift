@@ -34,7 +34,16 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to navigate to the new view?", preferredStyle: UIAlertControllerStyle.alert)
+       
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "YES", style: UIAlertActionStyle.destructive, handler: { action in
+            
+            // do something like...
+            self.performSegue(withIdentifier: "myPush", sender: self)
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
