@@ -12,6 +12,7 @@ class NewsTableViewController: UITableViewController
 {
     @IBOutlet var menuButton:UIBarButtonItem!
     @IBOutlet var extraButton:UIBarButtonItem!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,19 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        
+        let alert = UIAlertController(title: "Query", message: "Are you ready... to segue?", preferredStyle: .alert)
+    
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {
+            action in self.performSegue(withIdentifier: "mySegue", sender: self)
+        }))
+        
+ 
+        
+        self.present(alert, animated: true)
+        
     }
     
     override func didReceiveMemoryWarning() {
