@@ -193,7 +193,6 @@
 				TargetAttributes = {
 					F47029EF1A7F27DB00E30A3C = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = H64R62CZB4;
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -390,7 +389,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = H64R62CZB4;
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
@@ -406,7 +404,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = H64R62CZB4;
 				INFOPLIST_FILE = SidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appcoda.$(PRODUCT_NAME:rfc1034identifier)";
