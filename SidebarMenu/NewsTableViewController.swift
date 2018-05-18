@@ -34,7 +34,18 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        let alert = UIAlertController(title: "Confirm", message: "Are you sure you want to go to the next screen?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                self.performSegue(withIdentifier: "myPush", sender: self)
+                
+            default:
+                print("default")
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
