@@ -31,10 +31,23 @@ class NewsTableViewController: UITableViewController
         }
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want to navigate to the Hello Page?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "NOPE", style: .cancel))
+        alert.addAction(UIAlertAction(title: "YEP", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                self.performSegue(withIdentifier: "showHelloVC", sender: self)
+                
+            case .cancel:
+                print("canceled")
+                
+            case .destructive:
+                print("destroyed")
+            }}))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
