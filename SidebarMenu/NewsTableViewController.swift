@@ -34,7 +34,20 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        let alert = UIAlertController(title: "My Alert", message: "Did you want to leave this page?", preferredStyle: .actionSheet)
+        let firstAction = UIAlertAction(title: "Yes", style: .default) { (alert: UIAlertAction!) -> Void in
+            NSLog("You pressed button one")
+            self.performSegue(withIdentifier: "pushAlert", sender: nil)
+        }
+        let secondAction = UIAlertAction(title: "No", style: .default) { (alert: UIAlertAction!) -> Void in
+            NSLog("You pressed button two")
+        }
+        
+        alert.addAction(firstAction)
+        alert.addAction(secondAction)
+        present(alert, animated: true, completion:nil)
+        //NewsTableViewController?.pushViewController(ViewController, animated: true)
+        //performSegue(withIdentifier: "pushAlert", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -120,14 +133,14 @@ class NewsTableViewController: UITableViewController
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-    }
-    */
+    }*/
+    
 
 }
