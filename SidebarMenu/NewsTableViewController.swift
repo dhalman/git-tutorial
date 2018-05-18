@@ -34,7 +34,20 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        
+        let dialogString = "Are you sure you want to go to then next view?"
+        
+        let dialog = UIAlertController(title: "You sure?", message: dialogString, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "YUS", style: .default, handler: {(alert: UIAlertAction!) in self.performSegue(withIdentifier: "NewPushSegue", sender: self)})
+        
+        let action2 = UIAlertAction(title: "NO", style: .cancel, handler: nil)
+        dialog.addAction(action)
+        dialog.addAction(action2)
+        
+        present(dialog, animated: true, completion: nil)
+        
+        performSegue(withIdentifier: "NewPushSegue", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
