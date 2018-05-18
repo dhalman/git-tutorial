@@ -34,7 +34,18 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+        if (indexPath.row == 3){
+            let alert = UIAlertController(title: "Did you really want to see that?", message: "It might be risque", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                self.performSegue(withIdentifier: "showTheNews", sender: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
+        }else{
+            performSegue(withIdentifier: "myPush", sender: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +62,7 @@ class NewsTableViewController: UITableViewController
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 3
+        return 4
     }
 
     
@@ -71,16 +82,22 @@ class NewsTableViewController: UITableViewController
             cell.authorLabel.text = "Gabriel Theodoropoulos"
             cell.authorImageView.image = UIImage(named: "appcoda-300")
             
-        } else {
+        } else if indexPath.row == 2 {
             cell.postImageView.image = UIImage(named: "webkit-featured")
             cell.postTitleLabel.text = "A Beginner’s Guide to Animated Custom Segues in iOS 8"
             cell.authorLabel.text = "Gabriel Theodoropoulos"
             cell.authorImageView.image = UIImage(named: "appcoda-300")
             
+        } else {
+            cell.postImageView.image = UIImage(named: "webkit-featured")
+            cell.postTitleLabel.text = "Dont click this"
+            cell.authorLabel.text = "Alex Gravenor"
+            cell.authorImageView.image = UIImage(named: "appcoda-300")
         }
 
         return cell
     }
+    
     
     
     /*
