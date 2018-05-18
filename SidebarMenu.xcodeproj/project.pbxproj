@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4994018020AF58C8007BB2CC /* Challenge_Accept_4fedc45a89cf3_large.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4994017F20AF58C8007BB2CC /* Challenge_Accept_4fedc45a89cf3_large.jpeg */; };
 		F47029F61A7F27DB00E30A3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47029F51A7F27DB00E30A3C /* AppDelegate.swift */; };
 		F47029FB1A7F27DB00E30A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47029F91A7F27DB00E30A3C /* Main.storyboard */; };
 		F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47029FC1A7F27DB00E30A3C /* Images.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4994017F20AF58C8007BB2CC /* Challenge_Accept_4fedc45a89cf3_large.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Challenge_Accept_4fedc45a89cf3_large.jpeg; sourceTree = "<group>"; };
 		F47029F01A7F27DB00E30A3C /* SidebarMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SidebarMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47029F41A7F27DB00E30A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47029F51A7F27DB00E30A3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		F4D750141BD38E56009E1003 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4994017F20AF58C8007BB2CC /* Challenge_Accept_4fedc45a89cf3_large.jpeg */,
 				F4D750161BD38F0C009E1003 /* SWRevealViewController.h */,
 				F4D750171BD38F0C009E1003 /* SWRevealViewController.m */,
 				F4D750151BD38F0C009E1003 /* SidebarMenu-Bridging-Header.h */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47029FB1A7F27DB00E30A3C /* Main.storyboard in Resources */,
+				4994018020AF58C8007BB2CC /* Challenge_Accept_4fedc45a89cf3_large.jpeg in Resources */,
 				F4702A001A7F27DC00E30A3C /* LaunchScreen.xib in Resources */,
 				F47029FD1A7F27DB00E30A3C /* Images.xcassets in Resources */,
 			);

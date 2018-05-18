@@ -34,7 +34,25 @@ class NewsTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        performSegue(withIdentifier: "myPush", sender: self)
+//        let alertController = UIAlertController(title: "iOScreator", message:
+//            "Hello, world!", preferredStyle: UIAlertControllerStyle.alert)
+//        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+//
+//        self.present(alertController, animated: true, completion: nil)
+//
+        let refreshAlert = UIAlertController(title: "Are you sure you want to follow the link?", message: "(Press OK, for no ragrets)", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+            
+            self.performSegue(withIdentifier: "showMyVC", sender: self)
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
