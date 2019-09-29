@@ -130,4 +130,8 @@ class NewsTableViewController: UITableViewController
     }
     */
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "clickedCell", sender: Any?.self)
+    }
+    
 }
