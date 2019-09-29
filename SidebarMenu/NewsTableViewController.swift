@@ -82,7 +82,12 @@ class NewsTableViewController: UITableViewController
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Clicked: \(indexPath.row)")
+        self.performSegue(withIdentifier: "sw_mine", sender: self)
+    }
     
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
