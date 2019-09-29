@@ -1,0 +1,92 @@
+commit b2acc3141ba5e4078f6c22aea990880aa0f2da23
+Merge: f81db89 848e4f6
+Author: Derek Halman <d.halman@gmail.com>
+Date:   Thu Nov 9 11:04:52 2017 -0800
+
+    Merge pull request #73 from dhalman/revert-71-SamuelKern2020/news-detail-view
+    
+    Revert "Created a NewsDetailViewController and corresponding storyboard view,…"
+
+commit 848e4f6c627b3197945bb4ec06083ed2fb4a3658
+Author: Samuel Kern <kern08@live.com>
+Date:   Thu Nov 9 11:04:04 2017 -0800
+
+    Revert "Created a NewsDetailViewController and corresponding storyboard view,…"
+
+commit f81db8920c5fbb2927d92de872a6a428b813d53f
+Merge: 071d4c4 4bdc8df
+Author: Samuel Kern <kern08@live.com>
+Date:   Thu Nov 9 11:02:02 2017 -0800
+
+    Merge pull request #71 from dhalman/SamuelKern2020/news-detail-view
+    
+    Created a NewsDetailViewController and corresponding storyboard view,…
+
+commit 4bdc8dfd460110eccd30309837d1921e7f3f6acd
+Merge: 54241f2 071d4c4
+Author: Samuel Kern <kern08@live.com>
+Date:   Thu Nov 9 11:01:48 2017 -0800
+
+    Merge branch 'master' into SamuelKern2020/news-detail-view
+
+commit 54241f277b3d9acd449ee9b2e578311f74d2edc9
+Author: Sam <samuel.kern11@gmail.com>
+Date:   Thu Nov 9 10:42:14 2017 -0800
+
+    Created a NewsDetailViewController and cooresponding storyboard view, triggered a segue upon cell selection.
+    
+    Refactored the perform segue function for updated swift
+
+commit 071d4c48d8c5ae687ef84d52790e47122ba0e934
+Author: Griffin Johnson <griffin@Griffins-MacBook-Pro.local>
+Date:   Thu Nov 9 10:34:52 2017 -0800
+
+    This is the best edit ever
+
+commit 443fd59f8807380ab802f925c7104e6d859b5d20
+Author: dhalman <d.halman@gmail.com>
+Date:   Wed Jul 12 22:29:35 2017 -0700
+
+    Add slideshow to version control
+
+commit 226d7fa65634d95706e70b4d16e68daa54dd554b
+Merge: 6490318 38c5e22
+Author: dhalman <d.halman@gmail.com>
+Date:   Wed Jul 12 22:17:34 2017 -0700
+
+    Merge branch 'master' of https://github.com/dhalman/git-tutorial
+
+commit 38c5e229c4cd41b6d6cb64bb1898c523d3fc44ec
+Author: Derek Halman <derek@ifixit.com>
+Date:   Wed Jul 12 22:00:38 2017 -0700
+
+    Update README.md
+    
+    Added tutorial for lab exercise
+
+commit 64903182de36baa0559fc2fb2a918e56f8208bcc
+Author: dhalman <d.halman@gmail.com>
+Date:   Wed Jul 12 21:43:35 2017 -0700
+
+    Add source code from AppCoda tutorial. Thanks AppCoda!
+    
+    TODO: Make tableview cells on home page clickable.
+    
+    1) Open Main.storyboard
+    2) Add new view controller (feel free to style/title it however you
+       like)
+    3) Add new push segue from home controller to your new controller
+    4) Set name for push segue
+    5) Open NewsTableViewController.swift
+    6) Add table view delegate func "didSelectCell..."
+    7) In didSelectCell, call "performSegue..." for the segue you created in
+       Step 3
+    8) Run your project and test your code
+    9) Make sure you tested your code!!!
+    10) Return to README.md
+
+commit 550ec80d6cae7967aab1bd73182b0c9cba370103
+Author: Derek Halman <derek@ifixit.com>
+Date:   Wed Jul 12 19:51:18 2017 -0700
+
+    Initial commit
